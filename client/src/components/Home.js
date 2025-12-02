@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../config';
+
+await axios.post(`${API_BASE_URL}/api/notes`, { title: title.trim() });
+const res = await axios.get(`${API_BASE_URL}/api/notes`);
 
 function Home() {
   const [title, setTitle] = useState('');
