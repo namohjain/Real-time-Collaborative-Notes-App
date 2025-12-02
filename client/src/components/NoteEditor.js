@@ -2,6 +2,14 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import io from 'socket.io-client';
+import API_BASE_URL from '../config';
+import io from 'socket.io-client';
+
+const res = await axios.get(`${API_BASE_URL}/api/notes/${id}`);
+await axios.put(`${API_BASE_URL}/api/notes/${id}`, { ... });
+
+const socketOrigin = API_BASE_URL.replace(/\/api.*$/, '');
+socketRef.current = io(socketOrigin);
 
 const NoteEditor = () => {
   const { id } = useParams();
