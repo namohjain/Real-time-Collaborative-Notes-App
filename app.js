@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://namohnj_db_user:o1D3zeVfyshGjTbX@collaborative-notes.99t3c9z.mongodb.net/?appName=Collaborative-notes')
+mongoose.connect('process.env.MONGODB_URI')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
