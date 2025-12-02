@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import io from 'socket.io-client';
+import { io as createSocket } from 'socket.io-client';
 import API_BASE_URL from '../config';
 import io from 'socket.io-client';
+
+socketRef.current = createSocket('http://localhost:5000');
 
 const res = await axios.get(`${API_BASE_URL}/api/notes/${id}`);
 await axios.put(`${API_BASE_URL}/api/notes/${id}`, { ... });
