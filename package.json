@@ -1,0 +1,24 @@
+{
+  "name": "collaborative-notes",
+  "version": "1.0.0",
+  "description": "This is a collaborative notes app for a company in which the staff can update the notes in their team on a real time basis, updating the notes simultaneously as well as keeping them safe in the database.",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Collaborative",
+    "Notes app",
+    "Real-Time"
+  ],
+  "author": "Namoh Jain",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.0",
+    "socket.io": "^4.8.1"
+  }
+}
